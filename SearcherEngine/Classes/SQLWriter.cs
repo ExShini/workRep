@@ -104,15 +104,21 @@ namespace SearcherEngine.Classes
 
         public void addData(String data, bool normalize = true)
         {
+            if (normalize)
+                applyData(Regex.Replace(data, "'", "''"));
+            else
+                applyData(data);
         }
 
 
         public void addData(Int32 data)
         {
+            applyData(data.ToString());
         }
 
         public void addData(Guid data)
         {
+            applyData( "'{" + data.ToString() + "}'" );
         }
 
 
@@ -144,7 +150,9 @@ namespace SearcherEngine.Classes
             if (m_dataCount == m_parameters.Count)
             {
                 m_queryBuilder.Append(" ) ");
+                m_dataCount = 0;
                 write();
+                m_queryBuilder.Append(", ");
             }
             else
             {
@@ -168,7 +176,9 @@ namespace SearcherEngine.Classes
                 using (SqlConnection conn = new SqlConnection(getConnStr(m_server)))
                 {
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand(m_queryBuilder.ToString(), conn);
+                    //remove last " , "
+                    String query = Regex.Replace(m_queryBuilder.ToString(), @"\s?,\s?$", "");
+                    SqlCommand cmd = new SqlCommand(query , conn);
 
                     cmd.ExecuteNonQuery();
 
