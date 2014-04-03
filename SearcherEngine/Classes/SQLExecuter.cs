@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 
-namespace elementWithGeo.Classes
+namespace SearcherEngine.Classes
 {
     public class SQLExecuter
     {
@@ -49,7 +49,7 @@ namespace elementWithGeo.Classes
             m_query.Append(", ");
         }
 
-        public void setTargetSettings(String connStr, String tableName, String parameters, int writerCapasitor = 120)
+        public void setTargetSettings(String connStr, String tableName, String parameters, int writerCapasitor = 10)
         {
             m_connStr = connStr;
             m_tableName = tableName;

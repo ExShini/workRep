@@ -8,11 +8,9 @@ using FinderEngineSharp.Data;
 using FinderEngineSharp.Utils;
 using TokenizeUtils;
 using System.Data.SqlClient;
+using SearcherEngine.Interfaces;
 
-using elementWithGeo.Classes;
-using elementWithGeo.Interfaces;
-
-namespace elementWithGeo
+namespace SearcherEngine.Classes
 {
     public class Searcher
     {
@@ -96,11 +94,32 @@ namespace elementWithGeo
         }
 
         /// <summary>
+        /// Search matches with input from string 
+        /// </summary>
+        /// <param name="strInput">string for searching</param>
+        public void Search(String strInput)
+        {
+            List<ResultInfo<IData>> result = m_finderEngine.PyramidalSearch(m_tokenizer.Tokenize(strInput));
+
+            //if we haven't any result - declare it
+            if (result.Count == 0)
+            {
+                m_outputDataProvider.declareNegative();
+            }
+
+            //declare result
+            foreach (ResultInfo<IData> res in result)
+            {
+                m_outputDataProvider.declareResult(res);
+            }
+        }
+
+        /// <summary>
         /// Search matches with input from DataBase
         /// </summary>
         /// <param name="searchImput">SQLCommand for providing input</param>
         /// <param name="searchColumnIndex">Index from input line for comparing</param>
-        public void Search()
+        public void SearchDB()
         {
 
             using (SqlConnection conn = new SqlConnection(m_outputDataProvider.SearchConnStr))
@@ -114,6 +133,14 @@ namespace elementWithGeo
                 {
                     String strInput = reader.GetString(m_outputDataProvider.TargetIndex);
                     List<ResultInfo<IData>> result = m_finderEngine.PyramidalSearch(m_tokenizer.Tokenize(strInput));
+
+                    //if we haven't any result - declare it
+                    if (result.Count == 0)
+                    {
+                        m_outputDataProvider.declareNegative();
+                    }
+
+                    //declare result
                     foreach (ResultInfo<IData> res in result)
                     {
                         m_outputDataProvider.declareResult(reader, res);

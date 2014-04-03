@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Classes\Searcher.cs" />
     <Compile Include="Classes\SQLExecuter.cs" />
+    <Compile Include="Classes\SQLWriter.cs" />
     <Compile Include="Interfaces\IData.cs" />
     <Compile Include="Interfaces\IDataProvider.cs" />
     <Compile Include="Interfaces\IOutDataProvider.cs" />

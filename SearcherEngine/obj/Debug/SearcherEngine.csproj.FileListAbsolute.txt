@@ -1,0 +1,15 @@
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Debug\SearcherEngine.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Debug\SearcherEngine.pdb
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Debug\FinderEngineSharp.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Debug\SearchPrefixTree.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Debug\TextUtils.dll
+F:\MyProj\elementWithGeo\SearcherEngine\obj\Debug\SearcherEngine.dll
+F:\MyProj\elementWithGeo\SearcherEngine\obj\Debug\SearcherEngine.pdb
+F:\MyProj\libs\SearcherEngine\bin\Debug\SearcherEngine.dll
+F:\MyProj\libs\SearcherEngine\bin\Debug\SearcherEngine.pdb
+F:\MyProj\libs\SearcherEngine\bin\Debug\FinderEngineSharp.dll
+F:\MyProj\libs\SearcherEngine\bin\Debug\SearchPrefixTree.dll
+F:\MyProj\libs\SearcherEngine\bin\Debug\TextUtils.dll
+F:\MyProj\libs\SearcherEngine\obj\Debug\SearcherEngine.dll
+F:\MyProj\libs\SearcherEngine\obj\Debug\SearcherEngine.pdb
+F:\MyProj\libs\SearcherEngine\obj\Debug\SearcherEngine.csprojResolveAssemblyReference.cache

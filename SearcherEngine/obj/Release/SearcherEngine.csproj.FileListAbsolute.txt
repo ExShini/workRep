@@ -1,0 +1,16 @@
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Release\SearcherEngine.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Release\SearcherEngine.pdb
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Release\FinderEngineSharp.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Release\SearchPrefixTree.dll
+F:\MyProj\elementWithGeo\SearcherEngine\bin\Release\TextUtils.dll
+F:\MyProj\elementWithGeo\SearcherEngine\obj\Release\SearcherEngine.dll
+F:\MyProj\elementWithGeo\SearcherEngine\obj\Release\SearcherEngine.pdb
+F:\MyProj\elementWithGeo\SearcherEngine\obj\Release\SearcherEngine.csprojResolveAssemblyReference.cache
+F:\MyProj\libs\SearcherEngine\bin\Release\SearcherEngine.dll
+F:\MyProj\libs\SearcherEngine\bin\Release\SearcherEngine.pdb
+F:\MyProj\libs\SearcherEngine\bin\Release\FinderEngineSharp.dll
+F:\MyProj\libs\SearcherEngine\bin\Release\SearchPrefixTree.dll
+F:\MyProj\libs\SearcherEngine\bin\Release\TextUtils.dll
+F:\MyProj\libs\SearcherEngine\obj\Release\SearcherEngine.csprojResolveAssemblyReference.cache
+F:\MyProj\libs\SearcherEngine\obj\Release\SearcherEngine.dll
+F:\MyProj\libs\SearcherEngine\obj\Release\SearcherEngine.pdb

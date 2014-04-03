@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace elementWithGeo.Interfaces
+namespace SearcherEngine.Interfaces
 {
     public interface IDataProvider
     {
