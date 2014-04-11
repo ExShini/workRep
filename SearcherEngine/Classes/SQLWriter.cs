@@ -102,12 +102,17 @@ namespace SearcherEngine.Classes
             completeQuery();
         }
 
-        public void addData(String data, bool normalize = true)
+        public void addData(String data, bool unicode = false, bool normalize = true)
         {
             if (normalize)
-                applyData(Regex.Replace(data, "'", "''"));
-            else
-                applyData(data);
+                data = Regex.Replace(data, "'", "''");
+
+            data = "'" + data + "'";
+
+            if (unicode)
+                data = "N" + data;
+
+            applyData(data);
         }
 
 
